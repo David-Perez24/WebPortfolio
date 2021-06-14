@@ -1,0 +1,361 @@
+body{
+  width: 95vw;
+  height: 450vh;
+  overflow-x: hidden;
+  background: #0F2027;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+section{
+  top: 50px;
+  width: 100%;
+  height: 2100px;
+  position: absolute;
+  left: 0;
+}
+p{
+  margin: 0;
+  display: block;
+}
+/* Styles of NavBar*/
+.navigate-bar{
+  background: #777;
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0px;
+  z-index: 1000;
+  animation-name: animacion3;
+  animation-duration: 2s;
+}
+@keyframes animacion3 {
+  0%{
+    top: -100px;
+  }
+  100%{
+    top: 0;
+  }
+}
+
+.navigate-buttons{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-around;
+}
+.img-nav{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.img-nav img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.btn-nav{
+  width: 120px;
+  height: 50px;
+  border: none;
+  background: #555;
+  padding: 10px;
+}
+.btn-nav:focus{
+  outline: none;
+  animation: borderrightani 1s infinite alternate;
+}
+.btn-nav:hover{
+  background: #000;
+  color: #fff;
+  width: 130px;
+  height: 55px;
+  transition: 0.5s;
+}
+/* Styles to the Containers */
+.container{
+  width: 100%;
+  height: 300vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+}
+.container-data{
+  height: 100vh;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+}
+.container-form{
+  width: 100%;
+  height: 600px;
+  position: absolute;
+  top: 300vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+/* Styles to presentation DIV*/
+[positionation="top-present"]{
+  top: 0;
+}
+
+/* Styles to knowledge DIV*/
+[positionation="top-know"]{
+  top: 100vh;
+}
+/* Styles to experience DIV*/
+[positionation="top-expe"]{
+  top: 200vh;
+}
+[positionation="top-presDiv"]{
+    top: 0;
+    background: #555;
+    opacity: 0.5;
+}
+[positionation="topknowDiv"]{
+    top: 100vh;
+    background: #999;
+    opacity: 0.5;
+}
+[positionation="top-expeDiv"]{
+    top: 200vh;
+    background: #bbb;
+    opacity: 0.5;
+}
+.presentatDiv{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  animation: PresetaAniDiv 1s;
+}
+@keyframes PresetaAniDiv {
+  0%{
+    width: 0;
+    height: 0;
+  }
+  100%{
+    width: 100%;
+    height: 100vh;
+  }
+}
+/* Styles to left*/
+.paragraph-Left{
+  width: 90%;
+  height: 100%;
+  position: absolute;
+  -webkit-transform: skew(-10deg);
+     -moz-transform: skew(-10deg);
+       -o-transform: skew(-10deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left {
+  width: 45%;
+  height: 100%;
+  left: 35px;
+  position: absolute;
+	-webkit-transform: skew(10deg);
+	   -moz-transform: skew(10deg);
+	     -o-transform: skew(10deg);
+  display: flex;
+  top: 0;
+  justify-content: center;
+  border-radius: 10px;
+  background: #14CE5B;
+  animation: leftanimation 2s, borderleftani 2s infinite alternate;
+
+}
+.left:hover{
+  width: 50%;
+  height: 125%;
+  left: 125px;
+  top: 0px;
+  z-index: 100;
+  transition: 1s;
+}
+@keyframes leftanimation {
+  0%{
+    left: -700px;
+    height: 0;
+    background: #01A33F;
+    box-shadow: 0 0 10px #01A33F;
+  }
+  100%{
+    left: 35px;
+    height: 100%;
+    background: #14CE5B;
+    box-shadow: 0 0 40px #14CE5B;
+  }
+}
+@keyframes borderleftani {
+  0%{
+    background: #01A33F;
+    box-shadow: 0 0 10px #01A33F;
+  }
+  100%{
+    background: #14CE5B;
+    box-shadow: 0 0 40px #14CE5B;
+  }
+}
+/* Styles to Right */
+.paragraph-Right{
+  width: 90%;
+  height: 100%;
+  position: absolute;
+  right:0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  -webkit-transform: skew(-10deg);
+     -moz-transform: skew(-10deg);
+       -o-transform: skew(-10deg);
+}
+.paragraph-Righ div{
+  margin: auto;
+  margin-top: 50px;
+}
+.right {
+  width: 45%;
+  height: 100%;
+  right:  35px;
+  top: 0;
+  position: absolute;
+	-webkit-transform: skew(10deg);
+	   -moz-transform: skew(10deg);
+	     -o-transform: skew(10deg);
+  background: #35BDE2;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  animation: rightanimation 2s, borderrightani 2s infinite alternate;
+}
+.right:hover{
+  width: 50%;
+  height: 125%;
+  right: 125px;
+  bottom: 0px;
+  z-index: 100;
+  transition: 1s;
+}
+@keyframes rightanimation {
+  0%{
+    right: -700px;
+    height: 0;
+    background: #1A50E0;
+    box-shadow: 0 0 10px #1A50E0;
+  }
+  100%{
+    right: 35px;
+    height: 100%;
+    background: #35BDE2;
+    box-shadow: 0 0 40px #35BDE2;
+  }
+}
+@keyframes borderrightani {
+  0%{
+    background: #1A50E0;
+    box-shadow: 0 0 10px #1A50E0;
+  }
+  100%{
+    background: #35BDE2;
+    box-shadow: 0 0 40px #35BDE2;
+  }
+}
+
+/*#l1,#r1{
+  top: 125px;
+}
+#l2,#r2{
+  top: 275px;
+}
+#l3,#r3{
+  top: 410px;
+}*/
+/* Styles to container of IMG*/
+.container-img{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border-bottom: #5d5 4px solid;
+}
+.container-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+
+}
+#img-size{
+  width: 100%;
+}
+/* Styles to form of inputs*/
+.form-mail{
+    width: 50%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #0068DD;
+    animation-name: formmailanimation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+
+}
+@keyframes formmailanimation{
+  0%{
+    box-shadow: 0 0 10px #DF2626;
+  }
+  100%{
+    box-shadow: 0 0 40px #0068DD;
+  }
+}
+.form-inputs{
+  width: 75%;
+  height: 25px;
+  margin: 10px;
+  background: #555;
+  border:none;
+  border-bottom: #5d5 1px solid;
+}
+.form-inputs:focus{
+  outline: none;
+}
+.form-texarea{
+    width: 75%;
+    height: 200px;
+    background: #555;
+    border:none;
+    border-bottom: #5d5 1px solid;
+}
+.form-texarea:focus{
+  outline: none;
+}
+.form-btn{
+  border-style: none;
+  height: 30px;
+  width: 150px;
+  margin-top: 20px;
+  background: #5d5;
+}
+.form-btn:focus{
+  outline: none;
+}
+.form-btn:hover{
+  background: #4a4;
+  transition: 0.5s;
+}
