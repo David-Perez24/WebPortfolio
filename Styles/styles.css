@@ -84,7 +84,7 @@ p{
   position: absolute;
 }
 .container-data{
-  height: 100vh;
+  height: 50vh;
   width: 90%;
   display: flex;
   justify-content: center;
@@ -102,16 +102,16 @@ p{
 }
 /* Styles to presentation DIV*/
 [positionation="top-present"]{
-  top: 0;
+  top: 20vh;
 }
 
 /* Styles to knowledge DIV*/
 [positionation="top-know"]{
-  top: 100vh;
+  top: 120vh;
 }
 /* Styles to experience DIV*/
 [positionation="top-expe"]{
-  top: 200vh;
+  top: 220vh;
 }
 [positionation="top-presDiv"]{
     top: 0;
